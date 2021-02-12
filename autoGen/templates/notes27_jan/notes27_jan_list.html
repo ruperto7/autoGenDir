@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+<form>{% csrf_token %}</form>
+<h2 class="form-title">Notes27Jan</h2>
+            ===
+      
+            
+            <span class="smalltext" style="font-size:x-small" >{{ keyWordSet   }}</span>
+        
+            ===
+
+
+<table class="table table-fluid">
+    <thead>
+        <tr>
+            <th>Notes27Jan  &nbsp&nbsp  
+                Documents Found: {{ noOfDocs}} .&nbsp&nbsp Keywords Found: {{noOfKw  }} &nbsp&nbsp
+              
+                <a href="{% url 'notes27_jan_create' %}">Add New</a> 
+
+ 
+            <label>Select keyword -> </label><select id="location">
+		<option value="Algeria">Algeria</option>
+		<option value="Australia">Australia</option>
+		<option value="Belgium">Belgium</option>
+		<option value="Brazil">Brazil</option>
+		<option value="Burundi">Burundi</option>
+		<option value="Canada">Canada</option>
+		<option value="China">China</option>
+		<option value="Denmark">Denmark</option>
+		<option value="France">France</option>
+		<option value="Germany">Germany</option>
+		<option value="Iceland">Iceland</option>
+		<option value="India">India</option>
+		<option value="Indonesia">Indonesia</option>
+		<option value="Iran">Iran</option>
+		<option value="Italy">Italy</option>
+		<option value="Japan">Japan</option>
+		<option value="NZ">New Zealand</option>  
+		<option value="Philippines" selected="">Philippines</option>
+		<option value="Russia">Russia</option>
+		<option value="Singapore">Singapore</option>
+		<option value="SK">South Korea</option>		
+		<option value="Spain">Spain</option>
+		<option value="Sweden">Sweden</option>	
+		<option value="Turkey">Turkey</option>
+		<option value="US">US</option>
+		<option value="UK">UK</option>
+	</select> 
+    <button type="button" onclick="loadXMLDoc()"><span class="blinking" style="display: none;">Filtering Data</span>Filter on keyword</button>
+ 
+            </th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for Notes27Jan in object_list %}
+        <tr>
+            <td>
+                <div class="container divNotes" style=" background-color: rgb(230, 245, 245); margin: 5px; padding: 5px;">
+                    <div class="row " > 
+
+                            <div class="col-sm-10">
+                                    <img src="{% static './doc-x-Small.jpg' %}" } >  
+                                    <span class="fldName">&nbspid </span> 
+                                    <span class="italic x-small ">{{ Notes27Jan.id }} </span> 
+                                    <span class="fldName">&nbspDate </span> 
+                                    <span class="italic x-small ">{{ Notes27Jan.date }} </span>  
+                                    {% if Notes27Jan.keywords %}
+                                            <span class=" fldName " style="font-size: small">&nbspKeywords </span><span class=" x-small"> {{ Notes27Jan.keywords}}</span>
+                                    {% endif %} 
+                            </div>
+                    </div>
+                    <div class="row " > 
+                            <div class="col-sm-12">
+                                    <div class="col-sm-10"> 
+                                            {% if Notes27Jan.title %}
+                                                    <span class="fldName">&nbspTitle </span> <span >{{ Notes27Jan.title }}</span>
+                                            {% endif %} 
+                                            {% if Notes27Jan.desc %}
+                                                    <span class="fldName" >&nbspDesc </span>  <span class=" x-small"> {{ Notes27Jan.desc }} </span>
+                                            {% endif %} 
+                                    </div>
+                                    <div class="col-sm-10">
+                                            {% if Notes27Jan.comment %}
+                                                    <span class="fldName">&nbspComment </span> <span class=" x-small"></span><span class=" x-small"> {{ Notes27Jan.comment}}</span>
+                                            {% endif %}                        
+                                            {% if Notes27Jan.comment1 %}
+                                                    <span class="fldName">&nbspComment1 </span> <span class=" x-small">{{ Notes27Jan.comment1 }}</span>
+                                            {% endif %} 
+                                    </div>
+                                    <div class="col-sm-10">
+                                            {% if Notes27Jan.comment2 %}
+                                                    <span class="fldName" >&nbspComment2 </span><span class=" x-small"> {{ Notes27Jan.comment2 }}</span>
+                                            {% endif %} 
+                                            {% if Notes27Jan.comment3 %}
+                                                    <span class="fldName">&nbspComment3 </span><span class=" x-small"> {{ Notes27Jan.comment3}}</span>
+                                            {% endif %}   
+                                            {% if Notes27Jan.comment4 %}
+                                                    <span class="fldName">&nbspComment4 </span><span class=" x-small"> {{ Notes27Jan.comment4}}</span>
+                                            {% endif %}                       
+                                    </div>
+                            </div>        
+                    </div>
+                </div>
+            </td>
+            <td><a href="{% url "notes27_jan_detail" Notes27Jan.id %}">view</a></td>
+            <td><a href="{% url "notes27_jan_update" Notes27Jan.id %}">edit</a></td>
+            <td><a href="{% url "notes27_jan_delete" Notes27Jan.id %}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url "notes27_jan_create" %}">New</a>
+</div> 
+{% endblock  %}

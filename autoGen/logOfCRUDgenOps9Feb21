@@ -1,0 +1,72 @@
+In [1]: import django_basic_crud_generator
+
+In [2]: django_basic_crud_generator.generate_files( app_name="autoGen", model_name="Notes27Jan", use_template_layout=True, override_templates="templates
+   ...: /")
+autoGen exists
+autoGen\views created
+autoGen\views\notes27_jan created
+autoGen\views\__init__.py created
+autoGen\views\notes27_jan\__init__.py created
+
+Override Template File templates/views\list.tmpl Not Found
+autoGen\views\notes27_jan\notes27_jan_list.py created
+autoGen\urls.py exists
+
+Override Template File templates/views\create.tmpl Not Found
+autoGen\views\notes27_jan\notes27_jan_create.py created
+autoGen\urls.py exists
+
+Override Template File templates/views\detail.tmpl Not Found
+autoGen\views\notes27_jan\notes27_jan_detail.py created
+autoGen\urls.py exists
+
+Override Template File templates/views\update.tmpl Not Found
+autoGen\views\notes27_jan\notes27_jan_update.py created
+autoGen\urls.py exists
+
+Override Template File templates/views\delete.tmpl Not Found
+autoGen\views\notes27_jan\notes27_jan_delete.py created
+autoGen\urls.py exists
+autoGen\templates exists
+autoGen\templates\notes27_jan created
+
+Override Template File templates/templates\list.tmpl Not Found
+Override Layout Template File templates/layout\base.tmpl Not Found
+autoGen\templates\notes27_jan\notes27_jan_list.html created
+
+Override Template File templates/templates\create.tmpl Not Found
+Override Layout Template File templates/layout\base.tmpl Not Found
+autoGen\templates\notes27_jan\notes27_jan_create.html created
+
+Override Template File templates/templates\detail.tmpl Not Found
+Override Layout Template File templates/layout\base.tmpl Not Found
+autoGen\templates\notes27_jan\notes27_jan_detail.html created
+
+Override Template File templates/templates\update.tmpl Not Found
+Override Layout Template File templates/layout\base.tmpl Not Found
+autoGen\templates\notes27_jan\notes27_jan_update.html created
+
+Override Template File templates/templates\delete.tmpl Not Found
+Override Layout Template File templates/layout\base.tmpl Not Found
+autoGen\templates\notes27_jan\notes27_jan_delete.html created
+autoGen\tests created
+autoGen\tests\notes27_jan created
+autoGen\tests\__init__.py created
+autoGen\tests\notes27_jan\__init__.py created
+
+Override Template File templates/tests\list.tmpl Not Found
+autoGen\tests\notes27_jan\notes27_jan_list_test.py created
+
+Override Template File templates/tests\create.tmpl Not Found
+autoGen\tests\notes27_jan\notes27_jan_create_test.py created
+
+Override Template File templates/tests\detail.tmpl Not Found
+autoGen\tests\notes27_jan\notes27_jan_detail_test.py created
+
+Override Template File templates/tests\update.tmpl Not Found
+autoGen\tests\notes27_jan\notes27_jan_update_test.py created
+
+Override Template File templates/tests\delete.tmpl Not Found
+autoGen\tests\notes27_jan\notes27_jan_delete_test.py created
+
+In [3]:
