@@ -3,6 +3,8 @@ from autoGen.views import Notes27JanUpdateView
 from autoGen.views import Notes27JanDetailView
 from autoGen.views import Notes27JanCreateView
 from autoGen.views import Notes27JanListView
+from autoGen.views import Notes27JanListView0
+from autoGen.views import Notes27JanInfoView
 """autoGen URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -19,11 +21,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', Notes27JanListView.as_view(), name='notes27_jan_list'),      
+    path('admin/doc/', include('django.contrib.admindocs.urls'), name='admin_doc'),    
+    path('admin/', admin.site.urls, name='admin'),
+    path('', Notes27JanListView.as_view(), name='notes27_jan_list'),  
+    path('about/', TemplateView.as_view(template_name="notes27_jan_info.html"), name='about' ),
+    #path('info/', Notes27JanInfoView.get(), name='notes27_jan_info'), 
+    path('info/', Notes27JanListView0.as_view(), name='notes27_jan_info'),     
     path('notes27_jan/list/', Notes27JanListView.as_view(), name='notes27_jan_list'),
     path('notes27_jan/create/', Notes27JanCreateView.as_view(), name='notes27_jan_create'),
     path('notes27_jan/detail/<str:pk>/', Notes27JanDetailView.as_view(), name='notes27_jan_detail'),

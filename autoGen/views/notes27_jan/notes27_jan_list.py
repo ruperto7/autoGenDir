@@ -1,6 +1,24 @@
 from django.views.generic import ListView
 from autoGen.models import Notes27Jan
 from sortedcontainers import SortedList, SortedSet, SortedDict
+from django.http import HttpResponse
+class Notes27JanListView0(ListView):
+    model = Notes27Jan
+    #response = HttpResponse("Hello, world. You have class AutoGenInformationView working.")
+    queryset = []
+    template_name = "notes27_jan/notes27_jan_info.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+#===
+#===
+        context.update({
+            'info': 'wazzup',
+        })
+        return context
+
+
+
 class Notes27JanListView(ListView):
     
     model = Notes27Jan

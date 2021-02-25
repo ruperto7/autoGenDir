@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_code_generator',
     'django_extensions',
+    'django.contrib.admindocs',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    #'django.contrib.admindocs',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -58,7 +60,8 @@ ROOT_URLCONF = 'autoGen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Toto A/autoGenDir/autoGen/templates' ],
+        'DIRS': ['C:/Users/Toto A/autoGenDir/autoGen/templates',
+                'C:/Users/Toto A/autoGenDir/autoGen/templates/notes27_jan' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

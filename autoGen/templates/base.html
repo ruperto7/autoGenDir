@@ -10,6 +10,13 @@
 </head>
 <body>
 {% block title %}{{ section.title }} {% endblock %}
+<span class="genindex-jumpbox"> Go to ->
+    <a href="{% url 'notes27_jan_list' %}"> notes27_jan_list </a>  |
+    <a href="{% url 'about' %}"> about </a>  |
+    <a href="{% url 'notes27_jan_info' %}"> info</a>  |
+    <a href="{% url 'admin:index' %}"> admin </a>  |   
+    <a href="{% url 'django-admindocs-docroot' %}">admin_doc</a>  |
+     <span>
 {% block content %}{% endblock %}
 </body>
 </html>

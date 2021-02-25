@@ -3,3 +3,6 @@ from .notes27_jan_update import Notes27JanUpdateView
 from .notes27_jan_detail import Notes27JanDetailView
 from .notes27_jan_create import Notes27JanCreateView
 from .notes27_jan_list import Notes27JanListView
+from .notes27_jan_list import Notes27JanListView0
+from .notes27_jan_info import Notes27JanInfoView
+#pass
