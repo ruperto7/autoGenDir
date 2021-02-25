@@ -29,18 +29,11 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', Notes27JanListView.as_view(), name='notes27_jan_list'),  
     path('about/', TemplateView.as_view(template_name="notes27_jan_info.html"), name='about' ),
-    #path('info/', Notes27JanInfoView.get(), name='notes27_jan_info'), 
     path('info/', Notes27JanListView0.as_view(), name='notes27_jan_info'),     
     path('notes27_jan/list/', Notes27JanListView.as_view(), name='notes27_jan_list'),
     path('notes27_jan/create/', Notes27JanCreateView.as_view(), name='notes27_jan_create'),
     path('notes27_jan/detail/<str:pk>/', Notes27JanDetailView.as_view(), name='notes27_jan_detail'),
-    #path('notes27_jan/detail/<int:pk>/', Notes27JanDetailView.as_view(), name='notes27jan_detail'),
     path('notes27_jan/update/<str:pk>/', Notes27JanUpdateView.as_view(), name='notes27_jan_update'),
     path('notes27_jan/delete/<str:pk>/', Notes27JanDeleteView.as_view(), name='notes27_jan_delete'),
 
 ]
-
-#path('notes27_jan/create/', Notes27JanCreateView.as_view(), name='notes27_jan_create')
-#path('notes27_jan/detail/<int:pk>/', Notes27JanDetailView.as_view(), name='notes27_jan_detail')
-#path('notes27_jan/update/<int:pk>/', Notes27JanUpdateView.as_view(), name='notes27_jan_update')
-#path('notes27_jan/delete/<int:pk>/', Notes27JanDeleteView.as_view(), name='notes27_jan_delete')
