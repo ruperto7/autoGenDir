@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% csrf_token %}
 {% load static %}
-{% block content %}
 <form>{% csrf_token %}</form>
- TESTING {{ info }}
-{% for info in object_list %}
-{% endfor %}
+{% block content %}
 
+<span class="bigtext"></span></span>
+ TESTING {{ settings }}
+
+ 
+
+
+
+<code>SAMPLE CODE HERE</code>
 {% endblock  %}
