@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+{% block title %}{{ section.title }} {% endblock %}
+<span class="bigtext">  
+   <table class="table-bordered table footer">
+      <thead>
+         <td>PATH</td><td>VIEW</td><td>NAME</td>
+      </thead>
+   <tr>
+      <td>/info/ </td> <td>autoGen.views.notes27_jan.notes27_jan_list.Notes27JanListView0</td>  <td>notes27_jan_info<br/></td>
+   </tr><tr>
+      <td>/notes27_jan/create/ </td>  <td>autoGen.views.notes27_jan.notes27_jan_create.Notes27JanCreateView</td>       <td>notes27_jan_create<br/></td>
+   </tr><tr>
+      <td>/notes27_jan/delete/<str:pk>/  </td> <td>autoGen.views.notes27_jan.notes27_jan_delete.Notes27JanDeleteView </td>      <td>notes27_jan_delete<br/></td>
+   </tr><tr>
+      <td>/notes27_jan/detail/<str:pk>/ </td>  <td>autoGen.views.notes27_jan.notes27_jan_detail.Notes27JanDetailView </td>      <td>notes27_jan_detail<br/></td>
+   </tr> <tr>
+      <td>/notes27_jan/list/ </td>    <td>autoGen.views.notes27_jan.notes27_jan_list.Notes27JanListView</td>   <td>notes27_jan_list<br/></td>
+   <tr>
+      <td>/notes27_jan/update/<str:pk>/ </td> <td>autoGen.views.notes27_jan.notes27_jan_update.Notes27JanUpdateView</td>       <td>notes27_jan_update<br/></td>
+</tr> </table>
+
+     <span>
+{% block content %} 
+<pre>
+   {% debug %}
+</pre>
+{% endblock %}
+</body>
+</html>

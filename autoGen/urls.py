@@ -23,7 +23,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import TemplateView
-
+from django.conf.urls import url
 urlpatterns = [
     path('admin/doc/', include('django.contrib.admindocs.urls'), name='admin_doc'),    
     path('admin/', admin.site.urls, name='admin'),
@@ -35,5 +35,7 @@ urlpatterns = [
     path('notes27_jan/detail/<str:pk>/', Notes27JanDetailView.as_view(), name='notes27_jan_detail'),
     path('notes27_jan/update/<str:pk>/', Notes27JanUpdateView.as_view(), name='notes27_jan_update'),
     path('notes27_jan/delete/<str:pk>/', Notes27JanDeleteView.as_view(), name='notes27_jan_delete'),
+    #[url(r'^(\S+)/$', views.myview, name='myview') ],
+    #url(r'^.+/$', Notes27JanListView0.as_view(), name='notes27_jan_info'), 
 
 ]
