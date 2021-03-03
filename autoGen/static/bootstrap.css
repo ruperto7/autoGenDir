@@ -295,6 +295,8 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  resize: both;
+  width: 500px;
 }
 
 button,
@@ -1573,6 +1575,10 @@ pre code {
   .offset-xl-11 {
     margin-left: 91.666667%;
   }
+}
+
+.footer {
+  font-weight: lighter;
 }
 
 .table {

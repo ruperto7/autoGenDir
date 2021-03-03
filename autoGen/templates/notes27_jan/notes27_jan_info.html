@@ -4,10 +4,12 @@
 <form>{% csrf_token %}</form>
 {% block content %}
 
-<span class="bigtext"></span></span>
- TESTING {{ settings }}
+<span class="bigtext"></span> 
+ TESTING  settings  
 
- 
+ <pre>
+   {% debug %}
+</pre>
 
 
 

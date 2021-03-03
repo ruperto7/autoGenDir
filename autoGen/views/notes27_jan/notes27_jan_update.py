@@ -8,3 +8,12 @@ class Notes27JanUpdateView(UpdateView):
     fields = '__all__'
     template_name = "notes27_jan/notes27_jan_update.html"
     success_url = reverse_lazy('notes27_jan_list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+    #===
+    #===
+        context.update({
+            'template_name' : "notes27_jan/notes27_jan_update.html",
+        })
+        return context
